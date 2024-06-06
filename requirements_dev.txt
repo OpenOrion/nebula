@@ -1,0 +1,12 @@
+plotly==5.11.0
+ipywidgets==7.6
+jupyterlab
+matplotlib
+pytest
+
+numpy
+ipython_genutils
+jupyter_cadquery
+jax[cpu]
+jax_dataclasses
+kaleido

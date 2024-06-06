@@ -1,0 +1,130 @@
+Baseline MVP
+
+- Top Priority
+    [X] Parafoil demo
+
+    [ ] Tesselation
+        - [ ] Add normals for bspline surface triangles (normals issue)
+        - [X] L issue with triangulaion
+            - [X] Correct Orientation
+
+    - [ ] Sweep
+        - [ ] Same Wire along path
+        - [ ] Different Wire along path
+
+        - [ ] Revolve
+            - [ ] Add circle representation of spline
+            - [ ] Sweep curve/line around that circle
+
+[ ] Tech Debt
+    - Peformance
+        [ ] Optimizations
+            - [X] Use different dataclasses that work better with jit
+            - [ ] New masking/padding approach
+            - [ ] Better profiling for exactly what takes the most time
+            - [ ] Project
+            - [ ] Extrude
+            - [ ] Clipper
+            - [ ] Sort
+            - [ ] Tesselation
+            - [X] Reorder by index
+            - [X] Improve/change unique operations
+            - [X] Don't need to sort on all clip operations?
+    - [ ] Jax types
+    - [ ] Unit tests
+    - [ ] Auto evaluation point count
+
+
+# Next Release
+[ ] Querying (next release)
+    - [ ] Query centers by X,Y,Z
+        - [ ] Parallel
+        - [ ] Most/Least (+/-)
+    - [X] Query index
+    - [ ] Display selected entities
+
+
+[ ] OCC Compatibility (next release)
+    - [ ] BSpline Surfaces
+    - [ ] Polygons
+    - [ ] CQ detach
+
+[X] Add tesselation to work with Jupyter Cadquery
+    - [X] BSpline surfaces
+        - [X] Add normals for bspline surface triangles (normals issue)
+    - [X] Planar Surfaces
+        - [X] Fix ordering for clipping
+        - [X] Fix normals
+        - [X] BSpline Curves
+        - [X] Fix non showing planars in bspline case
+    - [X] Trimmed Planar Surfaces
+        - [X]  Solve bug with specific case
+    - [ ] Trimmed BSpline Surfaces (next release)
+
+
+[ ] Polar Array (next release)
+
+[ ] Add Edge Type
+    - [X] Add Lines
+    - [X] Add Bsplines
+        - [ ] Efficient Bsplines (next release)
+
+[ ] Projection
+    - [ ] Plane (next release)
+    - [ ] Bspline Surface (next release)
+
+[ ] 2D Clip
+    - [X] Line Line Intersection
+    - [X] 2D Clip
+        [X] 1x1 Intersections
+        [ ] Curve intersections (next release)
+        [ ] nx2 intersections (next release)
+        [ ] Split into two wires (next release)
+
+[X] Auto Diff working for bspline example
+    - [X] BSpline surface -> jacobian
+    - [X] Plane -> BSpline surface -> jacobian
+    - [ ] Polygon (next release)
+
+[ ] Add trims/holes
+    - [ ] BSpline Surfaces (next release)
+    - [X] Planar Surfaces
+
+[ ] 3D Contains (next release)
+    (tesselate and ray test)
+    - [ ] Planes
+    - [ ] BSpline
+
+[] 3D Clip (next release)
+    - [] Line Plane Intersection
+    - [] 3D Clip
+
+
+[ ] Query topology and get all face points
+    - [X] Inefficient method
+    - [X] Eventually scatter
+
+[ ] Try to plot
+    - [X] Fix normals
+    - [X] Make runtime faster - might downgrade later
+
+Workplane
+    - [X] Project to Axes
+    - [X] Basic Workplane
+
+- [X] Extrude
+    - [X] Plane
+    - [X] BSpline
+
+
+# Tommorows next steps
+[X] Fix extrude indexes for normal cases
+    - [X] Add quick extrude unit tests
+[X] Finally get tesselation to work properly
+[X] More unit test for existing edge cases
+[ ] Research into auto diff for polygons and in Jax in general
+
+[X] Start Bsplines
+
+[ ] Later: Account for multi line splits (not important right now)
+[ ] Later: Fix jax jit for interior intersection cases
