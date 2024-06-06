@@ -22,7 +22,7 @@ The Workplane class of Nebula is modeled after CadQuery syntax for familiarity a
 
 Nebula still has some performance issues mainly because the Jax JIT is very slow for operations that aren't uniform sized. Unfortunatly, operations like clipping and the amount of topology items are not uniform in nature so the only way to run fast would be to pad to a uniform size. This was not implemented mainly because time-deficits and the fact that the goal of this project mainly was to get CAD sensitivities.
 
-Nebula has a not of deficits in features and most likely has a lot of bugs so this project is for experimental use only. We will add more features as we need them as we currently don't have the resources to invest all our time to features that don't help our current roadmap.
+Nebula has a lot of deficits in features and most likely has a lot of bugs so this project is for experimental use only. We will add more features as we need them as we currently don't have the resources to invest all our time to features that don't help our current roadmap.
 
 
 # Install
