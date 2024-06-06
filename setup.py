@@ -10,6 +10,7 @@ setup(
         "nebula",
         "nebula.cases",
         "nebula.prim",
+        "nebula.evaluators",
         "nebula.helpers",
         "nebula.render",
         "nebula.tools",

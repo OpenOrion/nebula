@@ -14,7 +14,7 @@
 # About
 Nebula was an attempt to create simple geometries that are auto-differentiable with respect to their design variables for design optimization and machine learning tasks. 
 
-In the past the jacobians of geometry surface meshes with respect to the design variables were computed via finite sums, a task of altering each design variable by small epsilons and taking the position difference of their corresponding meshes. This process was very slow depending on the geometry and also restricted to just structured meshes because triangulation is very non-deterministic to small changes.
+In the past the jacobians of geometry surface meshes with respect to the design variables were computed via finite differences, a task of altering each design variable by small epsilons and taking the position difference of their corresponding meshes. This process was very slow depending on the geometry and also restricted to just structured meshes because triangulation is very non-deterministic to small changes.
 
 The structure of Nebula is single-to-many for performance reasons (i.e Solids with verticies and indexes rather than a list of class Solid). This allows us to construct simulataneuosly mutliple items at the same time.
 
@@ -37,8 +37,10 @@ See more examples in [examples](/examples) directory
 
 ```python
 import jax
+import jax.numpy as jnp
 from nebula import Workplane
 from nebula.render.visualization import show
+from nebula.render.visualization import Tesselator
 
 def make_mesh(height: jnp.ndarray, arc_height: jnp.ndarray):
     profile = (
@@ -69,7 +71,9 @@ arc_height_jac_magnitude = jnp.linalg.norm(mesh_jacobian[1],  axis=-1)
 # construct regular surface mesh
 mesh = make_mesh(height, arc_height)
 
+# show the mesh with magnitude of jacobian as color
 show(mesh, "plot", arc_height_jac_magnitude, name="CAD Sensitivity w.r.t arc height<br><sup>Nebula by Open Orion</sup>")
+
 ```
 
 ![./assets/example1_arc_height.png](./assets/example1_arc_height.png)
