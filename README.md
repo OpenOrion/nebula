@@ -2,14 +2,6 @@
 
 <p align="center">open source differentiable geometry engine</p>
 
-<p align="center">
-    <a href="https://discord.gg/H7qRauGkQ6">
-        <img src="https://img.shields.io/discord/913193916885524552?logo=discord"
-            alt="chat on Discord">
-    </a>
-</p>
-
-
 
 # About
 Nebula was an attempt to create simple geometries that are auto-differentiable with respect to their design variables for design optimization and machine learning tasks. 
